@@ -6,5 +6,5 @@ target 'Reguards' do
   use_frameworks!
 
   # Pods for Reguards
-
+  pod 'Alamofire'
 end
