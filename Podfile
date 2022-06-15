@@ -7,4 +7,6 @@ target 'Reguards' do
 
   # Pods for Reguards
   pod 'Alamofire'
+  pod 'GooglePlaces', '6.2.1'
+  pod 'SendBirdCalls'
 end

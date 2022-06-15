@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.6.1)
+  - GooglePlaces (6.2.1)
+  - SendBirdCalls (1.9.4):
+    - SendBirdWebRTC (~> 1.5.0)
+  - SendBirdWebRTC (1.5.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - GooglePlaces (= 6.2.1)
+  - SendBirdCalls
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - GooglePlaces
+    - SendBirdCalls
+    - SendBirdWebRTC
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  GooglePlaces: 94974aa119573d5acc2a35a699948dac838abd73
+  SendBirdCalls: 7ecc15b7712f435bdc7e86ced5feee158266a464
+  SendBirdWebRTC: 0ef66b6e6b2f73b307d1e4fe63ce36ab3f0b2518
+
+PODFILE CHECKSUM: 5f71bccf2d4a93ee5fc14afde8ec8acf49f9c69b
+
+COCOAPODS: 1.11.3
