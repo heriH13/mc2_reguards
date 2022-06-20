@@ -10,6 +10,7 @@ import CoreData
 import Commons
 import UserNotifications
 import SendBirdCalls
+import GooglePlaces
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     SendBirdCall.addDelegate(self, identifier: "AppDelegate")
                     
         remoteNotificationsRegistration(application)
-        
+        GMSPlacesClient.provideAPIKey("AIzaSyAOcEx-NfzC2REPKDY90sLFcczvaI4HMlw")
         return true
     }
 
