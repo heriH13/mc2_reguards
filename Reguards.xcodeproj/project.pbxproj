@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B53176428608CF900F725C4 /* CallCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53175E28608CF900F725C4 /* CallCenterViewController.swift */; };
+		6B53176528608CF900F725C4 /* VideoCall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B53175F28608CF900F725C4 /* VideoCall.storyboard */; };
+		6B53176628608CF900F725C4 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53176028608CF900F725C4 /* PulseAnimation.swift */; };
+		6B53176728608CF900F725C4 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53176128608CF900F725C4 /* CountdownViewController.swift */; };
+		6B53176828608CF900F725C4 /* CallingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53176228608CF900F725C4 /* CallingViewController.swift */; };
+		6B53176928608CF900F725C4 /* CallConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53176328608CF900F725C4 /* CallConfirmationViewController.swift */; };
 		9115BDE61523F90CF8041D92 /* Pods_Reguards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F8941E6152C80F5E6D2592 /* Pods_Reguards.framework */; };
 		DF5A474F28606F9500447BD7 /* Commons in Frameworks */ = {isa = PBXBuildFile; productRef = DF5A474E28606F9500447BD7 /* Commons */; };
 		DFDB38442859DDBD0096F95D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB38432859DDBD0096F95D /* AppDelegate.swift */; };
@@ -22,6 +28,12 @@
 /* Begin PBXFileReference section */
 		26F85F6E3276B1E9E9E42DF5 /* Pods-Reguards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reguards.release.xcconfig"; path = "Target Support Files/Pods-Reguards/Pods-Reguards.release.xcconfig"; sourceTree = "<group>"; };
 		67E2F4143778F9C3341035E3 /* Pods-Reguards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reguards.debug.xcconfig"; path = "Target Support Files/Pods-Reguards/Pods-Reguards.debug.xcconfig"; sourceTree = "<group>"; };
+		6B53175E28608CF900F725C4 /* CallCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallCenterViewController.swift; sourceTree = "<group>"; };
+		6B53175F28608CF900F725C4 /* VideoCall.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoCall.storyboard; sourceTree = "<group>"; };
+		6B53176028608CF900F725C4 /* PulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
+		6B53176128608CF900F725C4 /* CountdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		6B53176228608CF900F725C4 /* CallingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallingViewController.swift; sourceTree = "<group>"; };
+		6B53176328608CF900F725C4 /* CallConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallConfirmationViewController.swift; sourceTree = "<group>"; };
 		A9F8941E6152C80F5E6D2592 /* Pods_Reguards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reguards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5A474D28606F7E00447BD7 /* Commons */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Commons; sourceTree = "<group>"; };
 		DF5A475028608A0F00447BD7 /* Reguards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reguards.entitlements; sourceTree = "<group>"; };
@@ -50,6 +62,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B53175D28608CE700F725C4 /* Video Call Test */ = {
+			isa = PBXGroup;
+			children = (
+				6B53175E28608CF900F725C4 /* CallCenterViewController.swift */,
+				6B53176328608CF900F725C4 /* CallConfirmationViewController.swift */,
+				6B53176228608CF900F725C4 /* CallingViewController.swift */,
+				6B53176128608CF900F725C4 /* CountdownViewController.swift */,
+				6B53176028608CF900F725C4 /* PulseAnimation.swift */,
+				6B53175F28608CF900F725C4 /* VideoCall.storyboard */,
+			);
+			path = "Video Call Test";
+			sourceTree = "<group>";
+		};
 		A1B893446623B440B44879EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +113,7 @@
 		DFDB38422859DDBD0096F95D /* Reguards */ = {
 			isa = PBXGroup;
 			children = (
+				6B53175D28608CE700F725C4 /* Video Call Test */,
 				DF5A475028608A0F00447BD7 /* Reguards.entitlements */,
 				DFDB385A2859F5DD0096F95D /* Coredata Controller */,
 				DFDB38432859DDBD0096F95D /* AppDelegate.swift */,
@@ -183,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B53176528608CF900F725C4 /* VideoCall.storyboard in Resources */,
 				DFDB38532859DDBD0096F95D /* LaunchScreen.storyboard in Resources */,
 				DFDB38502859DDBD0096F95D /* Assets.xcassets in Resources */,
 				DFDB384B2859DDBD0096F95D /* Main.storyboard in Resources */,
@@ -255,11 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B53176728608CF900F725C4 /* CountdownViewController.swift in Sources */,
 				DFDB38482859DDBD0096F95D /* ViewController.swift in Sources */,
 				DFDB38442859DDBD0096F95D /* AppDelegate.swift in Sources */,
+				6B53176628608CF900F725C4 /* PulseAnimation.swift in Sources */,
 				DFDB384E2859DDBD0096F95D /* Reguards.xcdatamodeld in Sources */,
+				6B53176428608CF900F725C4 /* CallCenterViewController.swift in Sources */,
 				DFDB385C2859F61E0096F95D /* CoredataController.swift in Sources */,
 				DFDB38462859DDBD0096F95D /* SceneDelegate.swift in Sources */,
+				6B53176828608CF900F725C4 /* CallingViewController.swift in Sources */,
+				6B53176928608CF900F725C4 /* CallConfirmationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -389,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -408,13 +440,16 @@
 				CODE_SIGN_ENTITLEMENTS = Reguards/Reguards.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 843V7URJY9;
+				DEVELOPMENT_TEAM = KMB6GC5NVA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reguards/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Enable camera access so that others can see you during video calls.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Enable microphone access so that others can hear you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIMainStoryboardFile = VideoCall;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -422,7 +457,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.heri.Reguards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farrel.Reguards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -439,13 +474,16 @@
 				CODE_SIGN_ENTITLEMENTS = Reguards/Reguards.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 843V7URJY9;
+				DEVELOPMENT_TEAM = KMB6GC5NVA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reguards/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Enable camera access so that others can see you during video calls.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Enable microphone access so that others can hear you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIMainStoryboardFile = VideoCall;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,7 +491,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.heri.Reguards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farrel.Reguards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
