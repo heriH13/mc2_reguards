@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9115BDE61523F90CF8041D92 /* Pods_Reguards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F8941E6152C80F5E6D2592 /* Pods_Reguards.framework */; };
+		DF5A474F28606F9500447BD7 /* Commons in Frameworks */ = {isa = PBXBuildFile; productRef = DF5A474E28606F9500447BD7 /* Commons */; };
 		DFDB38442859DDBD0096F95D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB38432859DDBD0096F95D /* AppDelegate.swift */; };
 		DFDB38462859DDBD0096F95D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB38452859DDBD0096F95D /* SceneDelegate.swift */; };
 		DFDB38482859DDBD0096F95D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB38472859DDBD0096F95D /* ViewController.swift */; };
@@ -22,6 +23,8 @@
 		26F85F6E3276B1E9E9E42DF5 /* Pods-Reguards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reguards.release.xcconfig"; path = "Target Support Files/Pods-Reguards/Pods-Reguards.release.xcconfig"; sourceTree = "<group>"; };
 		67E2F4143778F9C3341035E3 /* Pods-Reguards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reguards.debug.xcconfig"; path = "Target Support Files/Pods-Reguards/Pods-Reguards.debug.xcconfig"; sourceTree = "<group>"; };
 		A9F8941E6152C80F5E6D2592 /* Pods_Reguards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reguards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF5A474D28606F7E00447BD7 /* Commons */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Commons; sourceTree = "<group>"; };
+		DF5A475028608A0F00447BD7 /* Reguards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reguards.entitlements; sourceTree = "<group>"; };
 		DFDB38402859DDBD0096F95D /* Reguards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reguards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDB38432859DDBD0096F95D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFDB38452859DDBD0096F95D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9115BDE61523F90CF8041D92 /* Pods_Reguards.framework in Frameworks */,
+				DF5A474F28606F9500447BD7 /* Commons in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,9 +58,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF5A474C28606F7E00447BD7 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DF5A474D28606F7E00447BD7 /* Commons */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		DFDB38372859DDBD0096F95D = {
 			isa = PBXGroup;
 			children = (
+				DF5A474C28606F7E00447BD7 /* Packages */,
 				DFDB38422859DDBD0096F95D /* Reguards */,
 				DFDB38412859DDBD0096F95D /* Products */,
 				F40BFAF6B25E7B5740512810 /* Pods */,
@@ -75,6 +88,7 @@
 		DFDB38422859DDBD0096F95D /* Reguards */ = {
 			isa = PBXGroup;
 			children = (
+				DF5A475028608A0F00447BD7 /* Reguards.entitlements */,
 				DFDB385A2859F5DD0096F95D /* Coredata Controller */,
 				DFDB38432859DDBD0096F95D /* AppDelegate.swift */,
 				DFDB38452859DDBD0096F95D /* SceneDelegate.swift */,
@@ -124,6 +138,9 @@
 			dependencies = (
 			);
 			name = Reguards;
+			packageProductDependencies = (
+				DF5A474E28606F9500447BD7 /* Commons */,
+			);
 			productName = Reguards;
 			productReference = DFDB38402859DDBD0096F95D /* Reguards.app */;
 			productType = "com.apple.product-type.application";
@@ -388,6 +405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Reguards/Reguards.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 843V7URJY9;
@@ -418,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Reguards/Reguards.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 843V7URJY9;
@@ -464,6 +483,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF5A474E28606F9500447BD7 /* Commons */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Commons;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DFDB384C2859DDBD0096F95D /* Reguards.xcdatamodeld */ = {
