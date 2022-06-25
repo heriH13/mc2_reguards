@@ -36,7 +36,7 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
     var number: String = ""
     var counter = 0
 //    var dataList : [contact] = []
-    var contactClass = Contact()
+    var contactClass = EmergencyContact()
     override func viewDidLoad() {
         super.viewDidLoad()
         layerBorder()
@@ -86,7 +86,12 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
         
         name = contact.givenName
         image = UIImage(data: contact.imageData!)
-        number = contact.phoneNumbers
+        //error karena number masih dalam bentuk CNNumber
+        
+//        let data = contact.phoneNumbers.ValueTy
+//        number = contact.phoneNumbers
+        number = "abcdef"
+
         contactClass.contactList[counter].image.image = image
         contactClass.contactList[counter].name.text = name
         contactClass.contactList[counter].flag = true

@@ -18,14 +18,14 @@ class StartCommutingLocationController: UIViewController{
     
     
     let transport = Trasportation()
-    let transportList = transport.trasportationList
+    var transportList : [transportation] = []
     var locationCoordinate : CLLocationCoordinate2D?
     var destinationName : Place?
     var predictionData : Dictionary<String, Any>?
     var range: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        transportList = self.transport.trasportationList
         transportationCollectionView.delegate = self
         transportationCollectionView.dataSource = self
         
@@ -41,7 +41,7 @@ class StartCommutingLocationController: UIViewController{
     @objc func transportationClicked(sender: UIButton){
         let counter = sender.tag
         for i in 0..<transportList.count{
-            if(transportList[i] == false && i == counter){
+            if(transportList[i].flag == false && i == counter){
                 transportList[i].flag = true
             }else{
                 transportList[i].flag  = false

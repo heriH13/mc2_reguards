@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import UIKit
+import CoreLocation
 extension StartCommutingLocationController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return transportList.count
@@ -17,6 +18,7 @@ extension StartCommutingLocationController: UICollectionViewDelegate, UICollecti
             fatalError()
         }
         cell.transportation.tag = indexPath.row
+        cell.transportation.addTarget(self, action: #selector(transportationClicked), for: .touchUpInside)
         cell.dataDisplayed = transportList[indexPath.row]
         return cell
     }

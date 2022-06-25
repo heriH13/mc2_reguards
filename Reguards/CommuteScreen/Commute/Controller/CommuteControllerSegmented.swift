@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import CoreLocation
+import UIKit
 //segmented
 extension CommuteController{
     @IBAction func segmentedAction(_ sender: UISegmentedControl) {

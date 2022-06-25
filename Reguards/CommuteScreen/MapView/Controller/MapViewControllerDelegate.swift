@@ -6,7 +6,10 @@
 //
 
 import Foundation
-
+import CoreLocation
+import MapKit
+import UIKit
+import GoogleMaps
 extension MapViewController{
     @objc func receiveCoordinate(_ notification: Notification){
         guard let coordinate = notification.userInfo?["data"] as? [String: Any] else{

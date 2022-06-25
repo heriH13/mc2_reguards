@@ -19,15 +19,14 @@ class LocationSearchTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-    var dataDisplayed: String {
+    var dataDisplayed: String = "" {
         didSet {
             setupView()
         }
     }
     
     func setupView() {
-        if let data = dataDisplayed {
-            resultCell.text = data.name
-        }
+        resultCell.text = dataDisplayed
+
     }
 }

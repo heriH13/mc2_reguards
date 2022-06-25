@@ -6,6 +6,11 @@
 //
 
 import Foundation
+import CoreLocation
+import MapKit
+import UIKit
+import GoogleMaps
+
 //untuk melakukan aksi dengan maps
 extension MapViewController{
     //gambar route

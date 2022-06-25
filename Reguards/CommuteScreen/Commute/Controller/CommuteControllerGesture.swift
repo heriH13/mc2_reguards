@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import CoreLocation
+import UIKit
 //Gesture
 extension CommuteController{
     

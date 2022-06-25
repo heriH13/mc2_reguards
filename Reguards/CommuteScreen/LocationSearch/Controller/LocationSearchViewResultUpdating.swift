@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 extension LocationSearchViewController: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         backgroundView.backgroundColor = UIColor(hex: "080D26")

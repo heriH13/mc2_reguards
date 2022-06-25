@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import CoreLocation
+import UIKit
 //untuk subs CLLocation yang berguna dalam update lokasi
 extension CommuteController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -15,12 +15,12 @@ extension UIView{
         self.layer.borderColor = UIColor.gray.cgColor
     }
     
-    func createBorder(){
+    func createBorderLayer(){
         self.layer.shadowColor = UIColor(hex: "222345")?.cgColor
         self.layer.shadowRadius = 10
         self.layer.shadowOffset = .zero
         self.layer.opacity = 1
-        self.layer.shadowPath = UIBezierPath(rect: view.bounds).cgPath
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
     }
 }
 
@@ -66,4 +66,11 @@ extension UIColor {
 
         return nil
     }
+}
+
+extension UITextField{
+    func clearText(){
+        self.text = ""
+    }
+
 }

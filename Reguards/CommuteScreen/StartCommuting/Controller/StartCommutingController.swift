@@ -14,12 +14,12 @@ class StartCommutingController: UIViewController{
     
 
     @IBOutlet weak var actionCollectionView: UICollectionView!
-    let actionList = Action()
-
+    let actionAccess = Action()
+    var actionList: [action] = []
     @IBOutlet weak var sosButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        actionList = actionAccess.actionArr
         
         actionCollectionView.delegate = self
         actionCollectionView.dataSource = self
@@ -32,6 +32,7 @@ class StartCommutingController: UIViewController{
     @IBAction func didSelectedStartCommuting(_ sender: Any) {
         performSegue(withIdentifier: "MapViewSegue", sender: self)
     }
+    
     @IBAction func didPressedSOSButton(_ sender: Any) {
         //untuk sos button
     }

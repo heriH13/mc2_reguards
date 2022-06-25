@@ -20,12 +20,12 @@ class LocationSearchViewController: UIViewController {
 
 
     let searchBar = UISearchController(searchResultsController: nil)
-    private var places: [Place] = []
+    internal var places: [Place] = []
     
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        view.createBorder()
+        view.createBorderLayer()
         navigationItem.searchController = searchBar
         searchBar.searchResultsUpdater = self
         resultsTableView.delegate = self

@@ -32,7 +32,7 @@ class CommuteController: UIViewController{
     var destination : CLLocationCoordinate2D?
     
     //untuk melakukan pengiriman coredata
-    let user: User?
+    var user: User?
     override func viewDidLoad() {
         super.viewDidLoad()
         viewList = [journetView,guardingRingView]

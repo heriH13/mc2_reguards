@@ -7,10 +7,11 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 extension StartCommutingController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return actionList.actionArr.count
+        return actionList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -19,7 +20,7 @@ extension StartCommutingController: UICollectionViewDelegate, UICollectionViewDa
             fatalError()
         }
         
-        cell.dataDisplayed = actionList.actionArr[indexPath.row]
+        cell.dataDisplayed = actionList[indexPath.row]
         return cell
     }
 }

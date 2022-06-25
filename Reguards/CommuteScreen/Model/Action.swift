@@ -11,13 +11,14 @@ import UIKit
 struct action{
     var name: String
     var desc: String
-    var image: UIImage!
+    var image: UIImage?
 }
 
 
 
 class Action{
-    let actionArr: [action] = [
+    
+    var actionArr: [action] = [
         action(
             name: "Call Center",
             desc: "Whenever you feel unsafe, call us.",
@@ -31,7 +32,7 @@ class Action{
     ]
     
     
-    let actionArrActive: [action] = [
+    var actionArrActive: [action] = [
         action(
             name: "Call Center",
             desc: "",

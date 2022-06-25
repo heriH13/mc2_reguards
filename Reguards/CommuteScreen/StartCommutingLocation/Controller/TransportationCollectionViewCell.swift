@@ -23,9 +23,8 @@ class TransportationCollectionViewCell: UICollectionViewCell {
     
     func setupView() {
         if let data = dataDisplayed {
-            
             transportation.setImage(UIImage(systemName: data.image), for: .normal)
-            transportation.addTarget(self, action: #selector(transportationClicked), for: .touchUpInside)
+            
             if(data.flag == true){
                 transportation.tintColor = .brown
             }else{

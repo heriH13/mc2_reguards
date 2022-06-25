@@ -14,11 +14,11 @@ class StartCommutingActiveController: UIViewController{
     @IBOutlet weak var actionCollectionView: UICollectionView!
     
     @IBOutlet weak var endCommutingButton: UIButton!
-    let actionList = Action()
-    
+    let actionAccess = Action()
+    var actionList : [action] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        actionList = actionAccess.actionArrActive
         actionCollectionView.delegate = self
         actionCollectionView.dataSource = self
         actionCollectionView.actionCellRegister(nibName: "StartCommutingActiveCollectionViewCell", identifier: "actionActiveCell")
