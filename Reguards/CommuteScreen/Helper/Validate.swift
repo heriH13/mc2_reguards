@@ -9,7 +9,7 @@ import Foundation
 
 
 class Validate{
-    func numValidate(_ num: String)-> Bool{
+    func numValidate(_ num: String) ->Bool{
         
         let regExpression = ".*[0-9].*"
         

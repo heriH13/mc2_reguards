@@ -21,9 +21,11 @@ class RegisterScreenViewController: UIViewController{
     let databaseAction = CoredataController()
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Register"
         nameTF.clearText()
         phoneTF.clearText()
         passwordTF.clearText()
+        passwordTF.isSecureTextEntry = true
         
     }
     
@@ -39,11 +41,17 @@ class RegisterScreenViewController: UIViewController{
 
             }else{
                 phoneTF.text = userInformation.phone
+                
             }
+            
         }
     }
+
     @IBAction func passwordChanged(_ sender: Any) {
-        userInformation.phone = passwordTF.text ?? ""
+//        var counter = passwordTF.isSecureTextEntry
+        userInformation.password = passwordTF.text ?? ""
+        passwordTF.isSecureTextEntry = true
+ 
     }
     @IBAction func didRegisterPressed(_ sender: Any) {
         var trigger : UIAlertController
@@ -58,6 +66,7 @@ class RegisterScreenViewController: UIViewController{
             self.present(trigger, animated: true, completion: nil)
             
         }else if(validate.checkEmptyField(data: userInformation.password)){
+            print(userInformation.password)
             
             trigger = alert.displayAlert(title: "password empty", body: "insert your password", isDisplayDetail: true)
             self.present(trigger, animated: true, completion: nil)
