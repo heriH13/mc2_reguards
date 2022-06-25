@@ -174,6 +174,7 @@
                         <outlet property="loginButtom" destination="NqN-Nq-1wf" id="nXm-1m-vgw"/>
                         <segue destination="Otp-a7-flm" kind="show" identifier="LoginViewSegue" id="Y6c-C4-a5S"/>
                         <segue destination="10W-uh-q8C" kind="show" identifier="RegisterScreenSegue" id="VdY-Lj-Ojn"/>
+                        <segue destination="bbQ-G3-Jj6" kind="show" identifier="NavigationSegue" id="BPt-fX-YGF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -221,6 +222,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPM-NO-YTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="53.571428571428569"/>
+        </scene>
+        <!--CommuteScreen-->
+        <scene sceneID="Kae-bn-Stw">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CommuteScreen" storyboardName="CommuteScreen" referencedIdentifier="CommuteScreen" id="bbQ-G3-Jj6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="I2c-lL-wcs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cg2-cq-y2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589" y="143"/>
         </scene>
     </scenes>
 </document>

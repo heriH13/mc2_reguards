@@ -216,11 +216,22 @@
                     <connections>
                         <outlet property="passwordTF" destination="t1p-7Q-cne" id="8Ey-aR-Jsv"/>
                         <outlet property="phoneNumberTF" destination="Hg3-7P-Mi7" id="Png-4I-SDd"/>
+                        <segue destination="sYz-bA-ZKY" kind="show" identifier="NavigationSegue" id="hHK-Em-824"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="23" y="54"/>
+        </scene>
+        <!--CommuteScreen-->
+        <scene sceneID="cN2-dN-WdX">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CommuteScreen" storyboardName="CommuteScreen" referencedIdentifier="CommuteScreen" id="sYz-bA-ZKY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yOE-FZ-CQi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feU-q4-568" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="-63"/>
         </scene>
     </scenes>
 </document>

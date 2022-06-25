@@ -23,11 +23,8 @@ class StartPageViewController: UIViewController{
     func checkLogin(){
         for data in database{
             if(data.login == true){
-                guard let commuteControllerVC = UIStoryboard(name: "CommuteScreen", bundle: nil).instantiateViewController(withIdentifier: "CommuteController") as? CommuteController else{
-                    fatalError()
-                }
-                commuteControllerVC.user = data
-                self.present(commuteControllerVC, animated: true)
+                
+                performSegue(withIdentifier: "NavigationSegue", sender: data)
             }
         }
     }
@@ -37,7 +34,19 @@ class StartPageViewController: UIViewController{
     @IBAction func didPressedRegister(_ sender: Any) {
         performSegue(withIdentifier: "RegisterScreenSegue", sender: self)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ""{
+            
+            let vc = segue.destination as? CommuteController
+            let senderData = sender as? User
+            vc?.user = senderData
+//            vc?.delegate = self
+            
+        }
+    }
     @IBAction func unwindToStart( _ seg: UIStoryboardSegue){
         
     }
+    
+    
 }

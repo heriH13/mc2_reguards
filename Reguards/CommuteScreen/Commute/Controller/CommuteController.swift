@@ -35,6 +35,7 @@ class CommuteController: UIViewController{
     var user: User?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true)
         viewList = [journetView,guardingRingView]
         title = "Journey"
         segmentedView.selectedSegmentIndex =  counter

@@ -22,12 +22,12 @@ class Action{
         action(
             name: "Call Center",
             desc: "Whenever you feel unsafe, call us.",
-            image: UIImage(named: "CallCenter")!
+            image: UIImage(named: "call")!
         ),
         action(
             name: "Request Guardian",
             desc: "A guardian will come and protect you.",
-            image: UIImage(named: "Guardian")!
+            image: UIImage(named: "req")!
         )
     ]
     

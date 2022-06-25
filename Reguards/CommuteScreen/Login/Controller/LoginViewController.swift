@@ -21,7 +21,7 @@ class LoginViewController: UIViewController{
         title = "Login"
         phoneNumberTF.clearText()
         passwordTF.clearText()
-        passwordTF.isSecureTextEntry = true
+//        passwordTF.isSecureTextEntry = true
     }
     @IBAction func phoneNumberChanged(_ sender: Any) {
         if let phoneNumber = phoneNumberTF.text{
@@ -43,15 +43,21 @@ class LoginViewController: UIViewController{
         for data in database{
             //belum dilakukan validasi
             if(true){
-                guard let commuteControllerVC = UIStoryboard(name: "CommuteScreen", bundle: nil).instantiateViewController(withIdentifier: "CommuteScreen") as? CommuteController else{
-                    fatalError()
-                }
-                data.login = true
-                commuteControllerVC.user = data
-                self.present(commuteControllerVC, animated: true)
+                
+                performSegue(withIdentifier: "NavigationSegue", sender: data)
+                break
             }
         }
         let trigger = alert.displayAlert(title: "Wrong Email/Password", body: "email atau password yang anda masukkan salah", isDisplayDetail: true)
         self.present(trigger, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "NavigationSegue"){
+            let vc = segue.destination as? CommuteController
+            let senderData = sender as? User
+            senderData?.login = true
+            vc?.user = senderData
+        }
     }
 }
