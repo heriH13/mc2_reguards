@@ -60,7 +60,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCf-XU-8ox">
                                 <rect key="frame" x="32" y="156" width="350" height="626"/>
                                 <connections>
-                                    <segue destination="oxX-So-4V2" kind="embed" id="82I-Lt-t8o"/>
+                                    <segue destination="oxX-So-4V2" kind="embed" identifier="guardingRingSegue" id="82I-Lt-t8o"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rf-WR-m92">

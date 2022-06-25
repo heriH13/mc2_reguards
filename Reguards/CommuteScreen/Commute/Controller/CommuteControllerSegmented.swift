@@ -12,6 +12,9 @@ import UIKit
 extension CommuteController{
     @IBAction func segmentedAction(_ sender: UISegmentedControl) {
         
+//        if(sender.selectedSegmentIndex == 1){
+//            
+//        }
         self.view.bringSubviewToFront(viewList[sender.selectedSegmentIndex])
         counter = segmentedView.selectedSegmentIndex
     }

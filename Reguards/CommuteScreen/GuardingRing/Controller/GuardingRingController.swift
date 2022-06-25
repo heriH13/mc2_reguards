@@ -10,7 +10,11 @@ import Contacts
 import ContactsUI
 import UIKit
 
+
+
 class GuardingRingController: UIViewController, CNContactPickerDelegate{
+    
+    
     
     
     @IBOutlet weak var layerOne: UIView!
@@ -35,7 +39,7 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
     var name: String = ""
     var number: String = ""
     var counter = 0
-//    var dataList : [contact] = []
+    var user : User!
     var contactClass = EmergencyContact()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,11 +100,23 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
         contactClass.contactList[counter].name.text = name
         contactClass.contactList[counter].flag = true
         
+        let newContact = Contact(context: context)
+        newContact.name = name
         
-        //simpen data untuk core data
-        //....
+        //perru terpadat perubahan data base untuk contact
+//        newContact.image = contact.imageData
+//        newContact.phone_number = contact.phoneNumbers
+//        user.addToContacts(newContact)
         
-        //...
+    }
+    func checkContact(){
+        let dataContact = user.contacts?.allObjects as! [Contact]
+        var i = 0
+        for contactButton in contactClass.contactList {
+//            contactButton.image = dataContact[i].image
+            contactButton.name.text = dataContact[i].name
+            i += 1
+        }
     }
 
 }

@@ -10,8 +10,6 @@ import CoreLocation
 
 class CommuteController: UIViewController{
     
-    
-
     @IBOutlet weak var segmentedView: UISegmentedControl!
     
     //view 1 untuk tampilan start commute
@@ -25,14 +23,13 @@ class CommuteController: UIViewController{
     var counter = 0
     var viewList: [UIView] = []
     var onCommute: Bool = false
-    
     //location
     let manager =  CLLocationManager()
     var locationCoordinate =  CLLocationCoordinate2D()
     var destination : CLLocationCoordinate2D?
     
     //untuk melakukan pengiriman coredata
-    var user: User?
+    var user: User!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -56,6 +53,7 @@ class CommuteController: UIViewController{
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
+
     
 }
 

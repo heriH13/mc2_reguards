@@ -40,16 +40,20 @@ class LoginViewController: UIViewController{
         userInformation.password = passwordTF.text ?? ""
     }
     @IBAction func didLoginPressed(_ sender: Any) {
+        var counter = false
         for data in database{
             //belum dilakukan validasi
-            if(true){
-                
+            if(data.phoneNumber == userInformation.phone && data.password == userInformation.password){
                 performSegue(withIdentifier: "NavigationSegue", sender: data)
+                counter = true
                 break
             }
         }
-        let trigger = alert.displayAlert(title: "Wrong Email/Password", body: "email atau password yang anda masukkan salah", isDisplayDetail: true)
-        self.present(trigger, animated: true, completion: nil)
+        if(counter == false){
+            let trigger = alert.displayAlert(title: "Wrong Email/Password", body: "email atau password yang anda masukkan salah", isDisplayDetail: true)
+            self.present(trigger, animated: true, completion: nil)
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

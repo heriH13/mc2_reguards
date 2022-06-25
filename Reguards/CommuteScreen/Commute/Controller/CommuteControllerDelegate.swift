@@ -29,4 +29,5 @@ extension CommuteController{
         viewList[0] = journetView
         manager.stopUpdatingLocation()
     }
+
 }

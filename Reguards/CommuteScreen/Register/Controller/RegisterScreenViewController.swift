@@ -25,7 +25,7 @@ class RegisterScreenViewController: UIViewController{
         nameTF.clearText()
         phoneTF.clearText()
         passwordTF.clearText()
-        passwordTF.isSecureTextEntry = true
+//        passwordTF.isSecureTextEntry = true
         
     }
     
@@ -40,7 +40,8 @@ class RegisterScreenViewController: UIViewController{
                 userInformation.phone = phoneNumber
 
             }else{
-                phoneTF.text = userInformation.phone
+                phoneTF.text = ""
+                userInformation.password = phoneNumber
                 
             }
             
@@ -50,7 +51,7 @@ class RegisterScreenViewController: UIViewController{
     @IBAction func passwordChanged(_ sender: Any) {
 //        var counter = passwordTF.isSecureTextEntry
         userInformation.password = passwordTF.text ?? ""
-        passwordTF.isSecureTextEntry = true
+//        passwordTF.isSecureTextEntry = true
  
     }
     @IBAction func didRegisterPressed(_ sender: Any) {
@@ -66,8 +67,6 @@ class RegisterScreenViewController: UIViewController{
             self.present(trigger, animated: true, completion: nil)
             
         }else if(validate.checkEmptyField(data: userInformation.password)){
-            print(userInformation.password)
-            
             trigger = alert.displayAlert(title: "password empty", body: "insert your password", isDisplayDetail: true)
             self.present(trigger, animated: true, completion: nil)
             
@@ -81,8 +80,8 @@ class RegisterScreenViewController: UIViewController{
             newUser.name = userInformation.name
             newUser.user_id = String(database.count)
             newUser.login = false
-//            newUser.phoneNumber userInformation.phone
-//            newUser.password = userInformation.password
+            newUser.phoneNumber = userInformation.phone
+            newUser.password = userInformation.password
             database.append(newUser)
             databaseAction.saveData()
             
