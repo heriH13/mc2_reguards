@@ -12,11 +12,12 @@ import UIKit
 extension CommuteController{
     @IBAction func segmentedAction(_ sender: UISegmentedControl) {
         
-//        if(sender.selectedSegmentIndex == 1){
-//            
-//        }
+        if(sender.selectedSegmentIndex == 1){
+         sendUser()
+        }
         self.view.bringSubviewToFront(viewList[sender.selectedSegmentIndex])
         counter = segmentedView.selectedSegmentIndex
+        
     }
     
     
@@ -24,5 +25,14 @@ extension CommuteController{
         
         segmentedView.setTitle("Journey", forSegmentAt: 0)
         segmentedView.setTitle("Contacts", forSegmentAt: 1)
+    }
+    
+    func sendUser(){
+        let data = ["data" : [user]]
+        NotificationCenter.default
+                    .post(name: NSNotification.Name("com.user.receive.User"),
+                     object: nil,
+                     userInfo: data)
+        
     }
 }

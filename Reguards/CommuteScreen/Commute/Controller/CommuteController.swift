@@ -53,7 +53,9 @@ class CommuteController: UIViewController{
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
-
+    deinit {
+      NotificationCenter.default
+       .removeObserver(self, name: NSNotification.Name("com.user.receive.User"), object: nil) }
     
 }
 

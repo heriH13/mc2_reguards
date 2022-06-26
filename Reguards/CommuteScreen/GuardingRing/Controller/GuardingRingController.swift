@@ -45,6 +45,10 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
         super.viewDidLoad()
         layerBorder()
         setUpButton()
+        NotificationCenter.default
+                          .addObserver(self,
+                                       selector:#selector(receiveUser(_:)),
+                         name: NSNotification.Name ("com.user.receive.User"),                                           object: nil)
         
     }
     func setUpButton(){
@@ -106,7 +110,7 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
         //perru terpadat perubahan data base untuk contact
 //        newContact.image = contact.imageData
 //        newContact.phone_number = contact.phoneNumbers
-//        user.addToContacts(newContact)
+        user.addToContacts(newContact)
         
     }
     func checkContact(){
@@ -117,6 +121,12 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
             contactButton.name.text = dataContact[i].name
             i += 1
         }
+    }
+    @objc func receiveUser(_ notification: Notification){
+        guard let data = notification.userInfo?["data"] as? [User] else{
+            fatalError()
+        }
+        self.user = data[0]
     }
 
 }

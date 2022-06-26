@@ -27,5 +27,9 @@ extension CommuteController{
         self.view.bringSubviewToFront(viewList[counter])
         segmentedView.selectedSegmentIndex = counter
         
+        if(counter == 1){
+            sendUser()
+        }
+        
     }
 }

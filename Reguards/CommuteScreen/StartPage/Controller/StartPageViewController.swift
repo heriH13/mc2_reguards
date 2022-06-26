@@ -33,7 +33,7 @@ class StartPageViewController: UIViewController{
         performSegue(withIdentifier: "RegisterScreenSegue", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == ""{
+        if segue.identifier == "NavigationSegue"{
             
             let vc = segue.destination as? CommuteController
             let senderData = sender as? User
