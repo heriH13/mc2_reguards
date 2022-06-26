@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (5.6.1)
+  - GoogleMaps (6.2.1):
+    - GoogleMaps/Maps (= 6.2.1)
+  - GoogleMaps/Base (6.2.1)
+  - GoogleMaps/Maps (6.2.1):
+    - GoogleMaps/Base
   - GooglePlaces (6.2.1)
   - SendBirdCalls (1.9.4):
     - SendBirdWebRTC (~> 1.5.0)
@@ -7,22 +12,25 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - GoogleMaps
   - GooglePlaces (= 6.2.1)
   - SendBirdCalls
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - GoogleMaps
     - GooglePlaces
     - SendBirdCalls
     - SendBirdWebRTC
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  GoogleMaps: 20d7b12be49a14287f797e88e0e31bc4156aaeb4
   GooglePlaces: 94974aa119573d5acc2a35a699948dac838abd73
   SendBirdCalls: 7ecc15b7712f435bdc7e86ced5feee158266a464
   SendBirdWebRTC: 0ef66b6e6b2f73b307d1e4fe63ce36ab3f0b2518
 
-PODFILE CHECKSUM: 5f71bccf2d4a93ee5fc14afde8ec8acf49f9c69b
+PODFILE CHECKSUM: 1629f0c8336ee5f5b6f4166553e14a79c6e2767f
 
 COCOAPODS: 1.11.3
