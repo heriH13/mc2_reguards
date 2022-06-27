@@ -13,13 +13,18 @@ class StartPageViewController: UIViewController{
     let databaseAction = CoredataController()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginButtom.Border()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         databaseAction.fetchScope()
         checkLogin()
-        loginButtom.Border()
     }
     func checkLogin(){
         for data in database{
-            print(data)
+            print(data.name)
+            
             if(data.login == true){
                 performSegue(withIdentifier: "NavigationSegue", sender: data)
                 break

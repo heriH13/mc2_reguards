@@ -39,12 +39,7 @@ class RegisterScreenViewController: UIViewController{
             if(validate.numValidate(phoneNumber)){
                 userInformation.phone = phoneNumber
 
-            }else{
-                phoneTF.text = ""
-                userInformation.phone = phoneNumber
-                
             }
-            
         }
     }
 
@@ -82,8 +77,8 @@ class RegisterScreenViewController: UIViewController{
             newUser.login = false
             newUser.phoneNumber = userInformation.phone
             newUser.password = userInformation.password
-            database.append(newUser)
             databaseAction.saveData()
+            
             
         }
     }

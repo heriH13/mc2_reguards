@@ -29,7 +29,9 @@
                             <constraint firstItem="PyI-gU-dKJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="u3j-xk-bRe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Setting" selectedImage="gear" catalog="system" id="P5j-DR-hrb"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="gear" selectedImage="gear" catalog="system" id="P5j-DR-hrb">
+                        <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="settingTableView" destination="PyI-gU-dKJ" id="7JK-Kj-N1v"/>
@@ -42,5 +44,6 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="gear" width="128" height="128"/>
     </resources>
 </document>

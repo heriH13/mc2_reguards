@@ -23,4 +23,11 @@ extension StartCommutingController: UICollectionViewDelegate, UICollectionViewDa
         cell.dataDisplayed = actionList[indexPath.row]
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if(indexPath.row == 0){
+            //untuk ke emergency call
+        }else if(indexPath.row == 1){
+            //untuk melakukan request guardian
+        }
+    }
 }

@@ -41,15 +41,17 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
     var counter = 0
     var user : User!
     var contactClass = EmergencyContact()
+    let databaseAction = CoredataController()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         NotificationCenter.default
                           .addObserver(self,
                                        selector:#selector(receiveUser(_:)),
                          name: NSNotification.Name ("com.user.receive.User"),                                           object: nil)
-        layerBorder()
-        setUpButton()
+        
         
     }
     func setUpButton(){
@@ -94,12 +96,11 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         
         name = contact.givenName
-        image = UIImage(data: contact.imageData!)
+            image = UIImage(data: contact.imageData!)
         //error karena number masih dalam bentuk CNNumber
         
 //        let data = contact.phoneNumbers.ValueTy
 //        number = contact.phoneNumbers
-        number = "abcdef"
 
         contactClass.contactList[counter].image.image = image
         contactClass.contactList[counter].name.text = name
@@ -115,27 +116,46 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
             }
         }
         //perlu terpadat perubahan data base untuk contact
-//        newContact.image = contact.imageData
+        newContact.image = contact.imageData
         
         
         user.addToContacts(newContact)
-        
-    }
-    func checkContact(){
-        
-        let dataContact = user.contacts?.allObjects as! [Contact]
-        var i = 0
-        for contactButton in contactClass.contactList {
-//            contactButton.image = dataContact[i].image
-            contactButton.name.text = dataContact[i].name
-            i += 1
+        do{
+            try context.save()
+        }catch{
+            fatalError()
         }
+//        print(user.contacts?.allObjects as? [Contact])
+        
+        
     }
+    
     @objc func receiveUser(_ notification: Notification){
         guard let data = notification.userInfo?["data"] as? [User] else{
             fatalError()
         }
         self.user = data[0]
+        layerBorder()
+        setUpButton()
+        checkContact()
+    }
+    func checkContact(){
+        
+        let dataContact = user.contacts?.allObjects as! [Contact]
+        print(dataContact[0].name)
+        
+        var i = 0
+        
+        for contactButton in contactClass.contactList {
+            print(dataContact.count)
+            if(i < dataContact.count){
+                let image = dataContact[i].image as! Data
+                contactButton.image.image = UIImage(data: image)
+                contactButton.name.text = dataContact[i].name
+                i += 1
+            }
+            
+        }
     }
 
 }
