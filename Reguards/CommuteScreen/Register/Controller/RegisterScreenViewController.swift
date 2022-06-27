@@ -41,7 +41,7 @@ class RegisterScreenViewController: UIViewController{
 
             }else{
                 phoneTF.text = ""
-                userInformation.password = phoneNumber
+                userInformation.phone = phoneNumber
                 
             }
             
@@ -49,9 +49,9 @@ class RegisterScreenViewController: UIViewController{
     }
 
     @IBAction func passwordChanged(_ sender: Any) {
-//        var counter = passwordTF.isSecureTextEntry
+
         userInformation.password = passwordTF.text ?? ""
-//        passwordTF.isSecureTextEntry = true
+
  
     }
     @IBAction func didRegisterPressed(_ sender: Any) {

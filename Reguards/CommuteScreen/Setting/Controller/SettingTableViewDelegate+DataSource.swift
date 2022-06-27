@@ -25,6 +25,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row == 1){
+            
 //            buat keluar dan inisiali bahwa user sudah tidak terdapat login
         }
     }
