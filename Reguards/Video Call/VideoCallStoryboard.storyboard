@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Call Confirmation View Controller-->
+        <scene sceneID="kCC-aJ-3sb">
+            <objects>
+                <viewController storyboardIdentifier="callConfirm" id="b86-zZ-COM" customClass="CallConfirmationViewController" customModule="Reguards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SPn-5d-M1I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XN5-Q9-xdb">
+                                <rect key="frame" x="107" y="225" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="aZR-t9-9DJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="iQc-ml-gxN"/>
+                                </constraints>
+                                <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onTapBtn:" destination="b86-zZ-COM" eventType="touchUpInside" id="MDm-Dx-Ift"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The call center will guide and calm you through the phone if you feel unsafe" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QVa-Zd-Pqt">
+                                <rect key="frame" x="32" y="595" width="350" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jG7-V5-f6G"/>
+                                </constraints>
+                                <color key="textColor" red="0.85490196080000003" green="0.85882352939999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ild-sG-qTx">
+                                <rect key="frame" x="0.0" y="91" width="414" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Tap to reach the call center" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROW-Ut-VEQ">
+                                <rect key="frame" x="32" y="490" width="350" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="P6l-lQ-fbd"/>
+                                </constraints>
+                                <color key="textColor" red="0.85490196080000003" green="0.85882352939999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LKS-ch-Zcg"/>
+                        <color key="backgroundColor" red="0.031372549020000001" green="0.050980392159999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Ild-sG-qTx" firstAttribute="leading" secondItem="LKS-ch-Zcg" secondAttribute="leading" id="BVa-mb-DY9"/>
+                            <constraint firstItem="LKS-ch-Zcg" firstAttribute="trailing" secondItem="QVa-Zd-Pqt" secondAttribute="trailing" constant="32" id="Ew0-3G-stL"/>
+                            <constraint firstItem="Ild-sG-qTx" firstAttribute="top" secondItem="LKS-ch-Zcg" secondAttribute="top" constant="47" id="FSr-3Q-992"/>
+                            <constraint firstItem="ROW-Ut-VEQ" firstAttribute="top" secondItem="XN5-Q9-xdb" secondAttribute="bottom" constant="65" id="G4D-sX-3KD"/>
+                            <constraint firstItem="ROW-Ut-VEQ" firstAttribute="centerX" secondItem="LKS-ch-Zcg" secondAttribute="centerX" id="LFH-Kd-OQ8"/>
+                            <constraint firstItem="Ild-sG-qTx" firstAttribute="trailing" secondItem="LKS-ch-Zcg" secondAttribute="trailing" id="Lbi-19-c3D"/>
+                            <constraint firstItem="ROW-Ut-VEQ" firstAttribute="leading" secondItem="LKS-ch-Zcg" secondAttribute="leading" constant="32" id="S5R-1t-5R7"/>
+                            <constraint firstItem="LKS-ch-Zcg" firstAttribute="trailing" secondItem="ROW-Ut-VEQ" secondAttribute="trailing" constant="32" id="ZKn-MX-KYe"/>
+                            <constraint firstItem="QVa-Zd-Pqt" firstAttribute="leading" secondItem="LKS-ch-Zcg" secondAttribute="leading" constant="32" id="cTS-ke-7OB"/>
+                            <constraint firstItem="XN5-Q9-xdb" firstAttribute="centerX" secondItem="LKS-ch-Zcg" secondAttribute="centerX" id="eUF-IB-1LH"/>
+                            <constraint firstItem="XN5-Q9-xdb" firstAttribute="top" secondItem="Ild-sG-qTx" secondAttribute="bottom" constant="111" id="fxo-0X-nWS"/>
+                            <constraint firstItem="QVa-Zd-Pqt" firstAttribute="centerX" secondItem="LKS-ch-Zcg" secondAttribute="centerX" id="iU1-ad-3k0"/>
+                            <constraint firstItem="QVa-Zd-Pqt" firstAttribute="top" secondItem="ROW-Ut-VEQ" secondAttribute="bottom" constant="15" id="jHs-Ws-UPY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Odk-9C-ed8"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="requestBtn" destination="XN5-Q9-xdb" id="yYZ-eo-Gaa"/>
+                        <segue destination="x3t-NH-y6S" kind="show" identifier="callConfirm" id="br6-sF-cIO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1S-qH-VmG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962.3188405797102" y="100.44642857142857"/>
+        </scene>
+        <!--Countdown View Controller-->
+        <scene sceneID="Flr-lB-woH">
+            <objects>
+                <viewController storyboardIdentifier="callCountdown" id="x3t-NH-y6S" customClass="CountdownViewController" customModule="Reguards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2dA-dP-zFo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quI-rz-jOr">
+                                <rect key="frame" x="122.5" y="680" width="169" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="h1E-1Z-xCC"/>
+                                    <constraint firstAttribute="width" constant="169" id="s0f-1P-NVb"/>
+                                </constraints>
+                                <color key="tintColor" red="0.85490196080000003" green="0.85882352939999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapCancelDialBtn:" destination="x3t-NH-y6S" eventType="touchUpInside" id="vvw-Wv-aGZ"/>
+                                    <segue destination="KVb-KZ-Yrd" kind="unwind" unwindAction="unwindToCallConfirm:" id="bWM-vS-dNm"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGb-sd-aJc">
+                                <rect key="frame" x="122" y="240" width="170" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX7-9x-Lvk">
+                                        <rect key="frame" x="35" y="35" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="K98-yr-2qw"/>
+                                            <constraint firstAttribute="width" constant="100" id="U3l-YG-292"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="65"/>
+                                        <color key="textColor" red="0.85490196080000003" green="0.85882352939999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdR-9p-uJE">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="proceed">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="28"/>
+                                            <color key="baseForegroundColor" red="0.85490196080000003" green="0.85882352939999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="proceedBtn:" destination="x3t-NH-y6S" eventType="touchUpInside" id="Xe7-go-Ol3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CX7-9x-Lvk" secondAttribute="trailing" constant="35" id="Gkz-Lt-8fb"/>
+                                    <constraint firstAttribute="bottom" secondItem="SdR-9p-uJE" secondAttribute="bottom" id="HiD-4c-HUJ"/>
+                                    <constraint firstItem="CX7-9x-Lvk" firstAttribute="leading" secondItem="ZGb-sd-aJc" secondAttribute="leading" constant="35" id="Jij-ef-bNq"/>
+                                    <constraint firstItem="CX7-9x-Lvk" firstAttribute="top" secondItem="ZGb-sd-aJc" secondAttribute="top" constant="35" id="RgH-yv-Yjp"/>
+                                    <constraint firstAttribute="width" constant="170" id="Vfy-7o-Kp3"/>
+                                    <constraint firstAttribute="bottom" secondItem="CX7-9x-Lvk" secondAttribute="bottom" constant="35" id="Wo9-Rh-MhH"/>
+                                    <constraint firstAttribute="width" secondItem="ZGb-sd-aJc" secondAttribute="height" multiplier="170:170" id="epP-tz-2Q2"/>
+                                    <constraint firstItem="SdR-9p-uJE" firstAttribute="top" secondItem="ZGb-sd-aJc" secondAttribute="top" id="fLo-fy-mr2"/>
+                                    <constraint firstAttribute="trailing" secondItem="SdR-9p-uJE" secondAttribute="trailing" id="qIz-D2-Arv"/>
+                                    <constraint firstAttribute="height" constant="170" id="w4U-iN-yJo"/>
+                                    <constraint firstItem="SdR-9p-uJE" firstAttribute="leading" secondItem="ZGb-sd-aJc" secondAttribute="leading" id="wVH-DW-5Qb"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Reaching the call center" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivZ-Xb-7Hj">
+                                <rect key="frame" x="32" y="490" width="350" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Z5b-Pw-mW3"/>
+                                </constraints>
+                                <color key="textColor" red="0.85490196080000003" green="0.85882352939999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUj-d3-5Bv">
+                                <rect key="frame" x="0.0" y="91" width="414" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="We've notified your guarding ring that you might be in danger. If you think you're safe, press the cancel button." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D3B-cU-9uz">
+                                <rect key="frame" x="32" y="595" width="350" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="eaH-tz-i98"/>
+                                </constraints>
+                                <color key="textColor" red="0.85490196080000003" green="0.85882352939999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pvb-SC-7fR"/>
+                        <color key="backgroundColor" red="0.031372549020000001" green="0.050980392159999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ivZ-Xb-7Hj" firstAttribute="leading" secondItem="Pvb-SC-7fR" secondAttribute="leading" constant="32" id="0EJ-gA-fXv"/>
+                            <constraint firstItem="fUj-d3-5Bv" firstAttribute="trailing" secondItem="Pvb-SC-7fR" secondAttribute="trailing" id="0qA-X7-qxC"/>
+                            <constraint firstItem="D3B-cU-9uz" firstAttribute="leading" secondItem="Pvb-SC-7fR" secondAttribute="leading" constant="32" id="3UG-7q-ViR"/>
+                            <constraint firstItem="fUj-d3-5Bv" firstAttribute="top" secondItem="Pvb-SC-7fR" secondAttribute="top" constant="47" id="7l7-RR-rKF"/>
+                            <constraint firstItem="ZGb-sd-aJc" firstAttribute="centerX" secondItem="Pvb-SC-7fR" secondAttribute="centerX" id="M1U-Ex-YAm"/>
+                            <constraint firstItem="Pvb-SC-7fR" firstAttribute="trailing" secondItem="ivZ-Xb-7Hj" secondAttribute="trailing" constant="32" id="UIC-cK-18t"/>
+                            <constraint firstItem="fUj-d3-5Bv" firstAttribute="leading" secondItem="Pvb-SC-7fR" secondAttribute="leading" id="WxG-Jz-cZm"/>
+                            <constraint firstItem="quI-rz-jOr" firstAttribute="top" secondItem="D3B-cU-9uz" secondAttribute="bottom" constant="15" id="Xhq-6f-8N6"/>
+                            <constraint firstItem="ZGb-sd-aJc" firstAttribute="top" secondItem="fUj-d3-5Bv" secondAttribute="bottom" constant="126" id="hdb-ad-5LB"/>
+                            <constraint firstItem="D3B-cU-9uz" firstAttribute="top" secondItem="ivZ-Xb-7Hj" secondAttribute="bottom" constant="15" id="lEK-sg-Bp7"/>
+                            <constraint firstItem="quI-rz-jOr" firstAttribute="centerX" secondItem="Pvb-SC-7fR" secondAttribute="centerX" id="lck-l2-Qsv"/>
+                            <constraint firstItem="ivZ-Xb-7Hj" firstAttribute="top" secondItem="ZGb-sd-aJc" secondAttribute="bottom" constant="80" id="ohC-SM-tLo"/>
+                            <constraint firstItem="Pvb-SC-7fR" firstAttribute="trailing" secondItem="D3B-cU-9uz" secondAttribute="trailing" constant="32" id="z4x-Oi-5ke"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="C3s-xA-sTu"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="cancelDialBtn" destination="quI-rz-jOr" id="m72-zo-BZv"/>
+                        <outlet property="countdownCircle" destination="ZGb-sd-aJc" id="Bva-9A-vbt"/>
+                        <outlet property="countdownLabel" destination="CX7-9x-Lvk" id="et7-5U-RYQ"/>
+                        <outlet property="proceedBtn" destination="SdR-9p-uJE" id="7dP-fu-Bdd"/>
+                        <segue destination="nEk-UG-N8J" kind="show" identifier="call" id="hbC-WH-xLx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hih-Lq-2g4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KVb-KZ-Yrd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2756.521739130435" y="100.44642857142857"/>
+        </scene>
+        <!--Calling View Controller-->
+        <scene sceneID="4E3-vv-M4l">
+            <objects>
+                <viewController storyboardIdentifier="callScreen" id="nEk-UG-N8J" customClass="CallingViewController" customModule="Reguards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6uu-C2-Tw0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98n-KL-Xgk">
+                                <rect key="frame" x="248.5" y="60" width="149.5" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="98n-KL-Xgk" secondAttribute="height" multiplier="720:1080" id="adH-rF-0zi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdh-1j-hN1">
+                                <rect key="frame" x="173" y="778" width="68" height="68"/>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="dial"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="BdM-dg-sTO"/>
+                                    <constraint firstAttribute="height" constant="68" id="gtU-8a-4st"/>
+                                </constraints>
+                                <color key="tintColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="phone.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                    <color key="baseForegroundColor" red="0.2196078431372549" green="0.22352941176470587" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapEndCallButton:" destination="nEk-UG-N8J" eventType="touchUpInside" id="WzK-bL-XcX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hdI-wA-5AG"/>
+                        <color key="backgroundColor" red="0.031372549020000001" green="0.050980392159999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Kdh-1j-hN1" firstAttribute="centerX" secondItem="hdI-wA-5AG" secondAttribute="centerX" id="G4k-Hx-Ah3"/>
+                            <constraint firstItem="98n-KL-Xgk" firstAttribute="top" secondItem="hdI-wA-5AG" secondAttribute="top" constant="16" id="ahy-0X-zb3"/>
+                            <constraint firstItem="hdI-wA-5AG" firstAttribute="bottom" secondItem="Kdh-1j-hN1" secondAttribute="bottom" constant="16" id="guf-3p-EDw"/>
+                            <constraint firstItem="hdI-wA-5AG" firstAttribute="trailing" secondItem="98n-KL-Xgk" secondAttribute="trailing" constant="16" id="v3y-O5-DOL"/>
+                            <constraint firstItem="98n-KL-Xgk" firstAttribute="width" secondItem="6uu-C2-Tw0" secondAttribute="width" multiplier="0.360697" id="yM8-WR-ad1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NcU-L8-riD"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="endBtn" destination="Kdh-1j-hN1" id="BlY-Ma-CoF"/>
+                        <outlet property="videoView" destination="98n-KL-Xgk" id="Emr-L2-zcW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s26-Wv-Rx2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3546" y="101"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hand.tap.fill" catalog="system" width="115" height="128"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+    </resources>
+</document>
