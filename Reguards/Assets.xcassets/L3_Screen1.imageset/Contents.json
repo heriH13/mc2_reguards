@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "L3_Screen2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "L3_Screen3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
