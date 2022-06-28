@@ -75,10 +75,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GhP-9X-vto" secondAttribute="bottom" constant="50" id="Ems-uc-iix"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZdS-MT-V1w" secondAttribute="trailing" id="J4B-fd-Jss"/>
                             <constraint firstItem="GhP-9X-vto" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bZu-Gk-ZX9"/>
-                            <constraint firstItem="ZdS-MT-V1w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jCz-YS-cAn"/>
+                            <constraint firstItem="ZdS-MT-V1w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gdO-nb-Eiv"/>
                             <constraint firstAttribute="bottom" secondItem="ZdS-MT-V1w" secondAttribute="bottom" id="r60-G3-4RG"/>
-                            <constraint firstItem="ZdS-MT-V1w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uff-D1-duA"/>
                             <constraint firstItem="ZdS-MT-V1w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wUM-Sx-ySa"/>
                         </constraints>
                     </view>

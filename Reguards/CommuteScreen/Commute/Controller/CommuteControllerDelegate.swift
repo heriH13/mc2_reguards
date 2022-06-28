@@ -29,5 +29,13 @@ extension CommuteController{
         viewList[0] = journetView
         manager.stopUpdatingLocation()
     }
+    
+    @IBAction func unwindCommuteScreenFromEndCall( _ seg: UIStoryboardSegue){
+        
+
+        self.view.bringSubviewToFront(journetView)
+        viewList[0] = journetView
+
+    }
 
 }

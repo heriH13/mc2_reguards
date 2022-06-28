@@ -131,10 +131,14 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
     }
     
     @objc func receiveUser(_ notification: Notification){
+
         guard let data = notification.userInfo?["data"] as? [User] else{
+        
             fatalError()
         }
         self.user = data[0]
+        print(data[0])
+        
         layerBorder()
         setUpButton()
         checkContact()
@@ -142,7 +146,6 @@ class GuardingRingController: UIViewController, CNContactPickerDelegate{
     func checkContact(){
         
         let dataContact = user.contacts?.allObjects as! [Contact]
-        print(dataContact[0].name)
         
         var i = 0
         

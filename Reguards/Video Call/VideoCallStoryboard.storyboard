@@ -29,9 +29,6 @@
                                     <imageReference key="image" image="hand.tap.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="onTapBtn:" destination="gdf-e5-Dca" eventType="touchUpInside" id="MQV-ZZ-SVU"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The call center will guide and calm you through the phone if you feel unsafe" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bp0-E6-HkG">
                                 <rect key="frame" x="32" y="595" width="350" height="50"/>
@@ -84,7 +81,7 @@
                     <navigationItem key="navigationItem" id="x7c-jd-hQa"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="requestBtn" destination="geO-2X-DLn" id="XD6-rO-xbA"/>
+                        <outlet property="requestBtn" destination="geO-2X-DLn" id="gd7-Bp-DDY"/>
                         <segue destination="NzX-6y-9fD" kind="show" identifier="dial" id="NIv-ir-R8s"/>
                     </connections>
                 </viewController>
@@ -173,6 +170,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FQf-hX-2QU"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="countdownCircle" destination="QMf-4X-wNW" id="Ewl-eJ-t1Z"/>
                         <outlet property="countdownLabel" destination="PAY-2z-A0P" id="Hwe-GH-VQJ"/>
@@ -213,6 +211,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapEndCallButton:" destination="NzX-6y-9fD" eventType="touchUpInside" id="scb-UK-t9Y"/>
+                                    <segue destination="1F2-gN-Fth" kind="unwind" unwindAction="unwindCommuteScreenFromEndCall:" id="CHH-9x-zLH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fez-vo-ts0">
@@ -272,6 +271,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2GG-Sd-MfP"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cancelBtn" destination="TSu-kC-mJs" id="xyn-mS-VDE"/>
                         <outlet property="countUpView" destination="XHb-VR-CCe" id="FYk-a6-Qzv"/>
@@ -281,6 +281,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZe-GX-Fxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1F2-gN-Fth" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3056.521739130435" y="804.91071428571422"/>
         </scene>

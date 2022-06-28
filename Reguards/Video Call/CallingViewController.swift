@@ -91,6 +91,7 @@ extension CallingViewController: DirectCallDelegate {
     
     func didEnd(_ call: DirectCall) {
         self.dismiss(animated: true) {
+            
             print("Successfully finished")
         }
     }

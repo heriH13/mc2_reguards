@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class OnboardingViewController: UIViewController {
 
@@ -83,7 +84,10 @@ class OnboardingViewController: UIViewController {
         count+=1
         if count >= 2 {
             scrollImageTimer.invalidate()
-            // put segue here for automatic segue to first page
+            let vc = UIStoryboard(name: "StartPage", bundle: nil)
+            let root = vc.instantiateViewController(identifier: "startPageNavigation")
+            root.modalPresentationStyle = .fullScreen
+            show(root, sender: nil)
         }
     }
 

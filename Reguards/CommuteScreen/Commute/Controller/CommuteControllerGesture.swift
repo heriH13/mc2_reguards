@@ -26,9 +26,11 @@ extension CommuteController{
         counter = 1 - counter
         self.view.bringSubviewToFront(viewList[counter])
         segmentedView.selectedSegmentIndex = counter
-        
+        topTitle.topItem?.title = titleList[counter]
         if(counter == 1){
             sendUser()
+        }else{
+            sendUserContact()
         }
         
     }

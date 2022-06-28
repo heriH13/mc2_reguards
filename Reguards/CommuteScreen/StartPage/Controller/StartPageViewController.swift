@@ -24,8 +24,9 @@ class StartPageViewController: UIViewController{
     func checkLogin(){
         for data in database{
             print(data.name)
+            print(data.login)
             
-            if(data.login == true){
+            if(data.login){
                 performSegue(withIdentifier: "NavigationSegue", sender: data)
                 break
             }
@@ -37,15 +38,28 @@ class StartPageViewController: UIViewController{
     @IBAction func didPressedRegister(_ sender: Any) {
         performSegue(withIdentifier: "RegisterScreenSegue", sender: self)
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "NavigationSegue"{
+//
+//            let vc = segue.destination as? TabBarCorner
+//            let senderData = sender as? User
+//            vc?.user = senderData
+//
+//
+////            vc?.delegate = self
+//
+//        }
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NavigationSegue"{
             
-            let vc = segue.destination as? CommuteController
+            let barViewControllers = segue.destination as! TabBarCorner
+            let destinationViewController = barViewControllers.viewControllers![0] as! CommuteController
             let senderData = sender as? User
-            vc?.user = senderData
-//            vc?.delegate = self
-            
+            destinationViewController.user = senderData
         }
+           
+        
     }
     @IBAction func unwindToStart( _ seg: UIStoryboardSegue){
         

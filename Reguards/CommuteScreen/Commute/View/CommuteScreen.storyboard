@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,6 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CK-t4-t0v">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.85490196078431369" green="0.85882352941176465" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="r1U-W0-cTM"/>
+                                </items>
+                                <navigationBarAppearance key="standardAppearance" backgroundEffect="regular">
+                                    <color key="backgroundColor" red="0.031372550870000002" green="0.066666662690000003" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </navigationBarAppearance>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barTintColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DLD-5J-RPv">
                                 <rect key="frame" x="32" y="96" width="350" height="33"/>
                                 <color key="backgroundColor" red="0.13333333333333333" green="0.13725490196078433" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,19 +60,19 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVc-4m-JSz">
-                                <rect key="frame" x="32" y="156" width="350" height="577"/>
+                                <rect key="frame" x="32" y="156" width="350" height="617"/>
                                 <connections>
                                     <segue destination="jMX-Vf-Yk2" kind="embed" id="AZT-1H-PPn"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCf-XU-8ox">
-                                <rect key="frame" x="32" y="156" width="350" height="577"/>
+                                <rect key="frame" x="32" y="156" width="350" height="617"/>
                                 <connections>
                                     <segue destination="oxX-So-4V2" kind="embed" identifier="guardingRingSegue" id="82I-Lt-t8o"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rf-WR-m92">
-                                <rect key="frame" x="32" y="156" width="350" height="577"/>
+                                <rect key="frame" x="32" y="156" width="350" height="617"/>
                                 <connections>
                                     <segue destination="P98-74-IzC" kind="embed" id="CFq-bA-X4P"/>
                                 </connections>
@@ -58,9 +86,9 @@
                             <constraint firstItem="DLD-5J-RPv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="HZ9-dv-6x3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8rf-WR-m92" secondAttribute="trailing" constant="32" id="L24-G9-0h1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCf-XU-8ox" secondAttribute="trailing" constant="32" id="M5a-w7-Khh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hVc-4m-JSz" secondAttribute="bottom" constant="80" id="OGG-Od-FlT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hVc-4m-JSz" secondAttribute="bottom" constant="40" id="OGG-Od-FlT"/>
                             <constraint firstItem="hVc-4m-JSz" firstAttribute="top" secondItem="DLD-5J-RPv" secondAttribute="bottom" constant="28" id="RHG-Yn-755"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8rf-WR-m92" secondAttribute="bottom" constant="80" id="Vc5-PW-rub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8rf-WR-m92" secondAttribute="bottom" constant="40" id="Vc5-PW-rub"/>
                             <constraint firstItem="hVc-4m-JSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="bO0-xu-nDH"/>
                             <constraint firstItem="zCf-XU-8ox" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="egv-Ff-R3s"/>
                             <constraint firstItem="zCf-XU-8ox" firstAttribute="top" secondItem="DLD-5J-RPv" secondAttribute="bottom" constant="28" id="fe8-Yk-Tma"/>
@@ -68,7 +96,7 @@
                             <constraint firstItem="DLD-5J-RPv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="hnH-Ng-VqA"/>
                             <constraint firstItem="8rf-WR-m92" firstAttribute="top" secondItem="DLD-5J-RPv" secondAttribute="bottom" constant="28" id="iai-CU-cf3"/>
                             <constraint firstItem="8rf-WR-m92" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="m5f-tB-Zqm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zCf-XU-8ox" secondAttribute="bottom" constant="80" id="xmx-pu-XfC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zCf-XU-8ox" secondAttribute="bottom" constant="40" id="xmx-pu-XfC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="commute" image="figure.walk" catalog="system" selectedImage="figure.walk" id="a5f-kN-Ahm">
@@ -80,6 +108,7 @@
                         <outlet property="journetView" destination="hVc-4m-JSz" id="uBl-ZQ-0kF"/>
                         <outlet property="journeyActiveView" destination="8rf-WR-m92" id="P3R-0l-SVa"/>
                         <outlet property="segmentedView" destination="DLD-5J-RPv" id="t0G-Po-A29"/>
+                        <outlet property="topTitle" destination="1CK-t4-t0v" id="lNZ-nX-v4x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -114,14 +143,14 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42n-QX-HLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="776"/>
+            <point key="canvasLocation" x="3496" y="1482"/>
         </scene>
         <!--Start Commuting Controller-->
         <scene sceneID="fLy-M5-2bs">
             <objects>
                 <viewController id="jMX-Vf-Yk2" customClass="StartCommutingController" customModule="Reguards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mcO-ab-glW">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="577"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8i-wz-XOS">
@@ -187,7 +216,7 @@ your location to your contacts so that they can track you.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didSelectedStartCommuting:" destination="jMX-Vf-Yk2" eventType="touchUpInside" id="ocN-cs-p7i"/>
+                                    <action selector="didSelectedStartCommuting:" destination="jMX-Vf-Yk2" eventType="touchUpInside" id="BKb-Yh-6z9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="IT3-bD-c33">
@@ -220,30 +249,19 @@ your location to your contacts so that they can track you.</string>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Fx-pq-m3y">
-                                <rect key="frame" x="16" y="519" width="84" height="43"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="SOS">
-                                            <attributes>
-                                                <color key="NSColor" red="0.85490196078431369" green="0.85882352941176465" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0I-o5-Dh6">
+                                <rect key="frame" x="0.0" y="499" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2u7-uw-2b9"/>
+                                    <constraint firstAttribute="height" constant="30" id="TzZ-oX-vvw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SOS"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="16"/>
+                                        <integer key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="didPressedSOSButton:" destination="jMX-Vf-Yk2" eventType="touchUpInside" id="d9o-fb-UhI"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="odW-fs-l7f"/>
@@ -252,16 +270,14 @@ your location to your contacts so that they can track you.</string>
                             <constraint firstItem="IT3-bD-c33" firstAttribute="leading" secondItem="mcO-ab-glW" secondAttribute="leadingMargin" id="1xM-wz-mVV"/>
                             <constraint firstItem="w8i-wz-XOS" firstAttribute="top" secondItem="mcO-ab-glW" secondAttribute="topMargin" id="BCI-xb-Inr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w8i-wz-XOS" secondAttribute="trailing" id="BVJ-CL-rtk"/>
+                            <constraint firstItem="S0I-o5-Dh6" firstAttribute="leading" secondItem="odW-fs-l7f" secondAttribute="leading" id="FJM-ch-sgF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IT3-bD-c33" secondAttribute="trailing" id="FPr-Jr-UkC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ctt-48-MdN" secondAttribute="trailing" id="Hte-Na-5yq"/>
                             <constraint firstItem="ctt-48-MdN" firstAttribute="leading" secondItem="mcO-ab-glW" secondAttribute="leadingMargin" id="IaV-tB-90A"/>
-                            <constraint firstItem="odW-fs-l7f" firstAttribute="trailing" secondItem="8Fx-pq-m3y" secondAttribute="trailing" constant="250" id="Mud-WH-GFj"/>
                             <constraint firstItem="w8i-wz-XOS" firstAttribute="leading" secondItem="mcO-ab-glW" secondAttribute="leadingMargin" id="O38-VK-Gvg"/>
+                            <constraint firstItem="S0I-o5-Dh6" firstAttribute="top" secondItem="ctt-48-MdN" secondAttribute="bottom" constant="20" id="TF3-ML-4LC"/>
                             <constraint firstItem="ZKa-TI-zFu" firstAttribute="leading" secondItem="mcO-ab-glW" secondAttribute="leadingMargin" id="TmZ-wt-X1h"/>
                             <constraint firstItem="ZKa-TI-zFu" firstAttribute="top" secondItem="w8i-wz-XOS" secondAttribute="bottom" constant="28" id="at4-L6-jio"/>
-                            <constraint firstItem="8Fx-pq-m3y" firstAttribute="top" secondItem="ctt-48-MdN" secondAttribute="bottom" constant="40" id="egN-al-x2T"/>
-                            <constraint firstItem="odW-fs-l7f" firstAttribute="bottom" secondItem="8Fx-pq-m3y" secondAttribute="bottom" constant="15" id="hux-Kv-Z1h"/>
-                            <constraint firstItem="8Fx-pq-m3y" firstAttribute="leading" secondItem="mcO-ab-glW" secondAttribute="leadingMargin" id="ms9-13-Hbb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZKa-TI-zFu" secondAttribute="trailing" id="snE-vu-gdq"/>
                             <constraint firstItem="IT3-bD-c33" firstAttribute="top" secondItem="ZKa-TI-zFu" secondAttribute="bottom" constant="44" id="swL-uU-fTX"/>
                             <constraint firstItem="ctt-48-MdN" firstAttribute="top" secondItem="IT3-bD-c33" secondAttribute="bottom" constant="20" id="wsN-UU-gyw"/>
@@ -269,20 +285,21 @@ your location to your contacts so that they can track you.</string>
                     </view>
                     <connections>
                         <outlet property="actionCollectionView" destination="ctt-48-MdN" id="Ptj-yH-wr2"/>
-                        <outlet property="sosButton" destination="8Fx-pq-m3y" id="Uta-HJ-aZt"/>
+                        <outlet property="sosButton" destination="S0I-o5-Dh6" id="U1j-Qh-fcp"/>
                         <segue destination="QKL-bz-KHY" kind="show" identifier="MapViewSegue" id="PjY-qX-iIo"/>
+                        <segue destination="Bw4-qi-KsO" kind="show" identifier="callSegue" id="frs-Hq-JmM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68z-tS-ERC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513" y="704"/>
+            <point key="canvasLocation" x="4167" y="1000"/>
         </scene>
         <!--Guarding Ring Controller-->
         <scene sceneID="khV-Yt-I9C">
             <objects>
                 <viewController id="oxX-So-4V2" customClass="GuardingRingController" customModule="Reguards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q4K-c2-pbm">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="577"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30P-1c-iwY">
@@ -631,7 +648,7 @@ your location to your contacts so that they can track you.</string>
             <objects>
                 <viewController id="P98-74-IzC" customClass="StartCommutingActiveController" customModule="Reguards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9t8-a1-V0n">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="577"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wb-Hw-HiZ">
@@ -743,6 +760,23 @@ your location to your contacts so that they can track you.</string>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mua-Yk-khb">
+                                <rect key="frame" x="0.0" y="423" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6Ks-hY-IY5"/>
+                                    <constraint firstAttribute="width" constant="60" id="iuV-Cr-QBT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SOS"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressedSos:" destination="P98-74-IzC" eventType="touchUpInside" id="9hW-jO-dBA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eVP-5o-Ob7"/>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.050980392159999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -750,19 +784,33 @@ your location to your contacts so that they can track you.</string>
                             <constraint firstItem="hpm-XF-IEb" firstAttribute="top" secondItem="2Wb-Hw-HiZ" secondAttribute="bottom" constant="32" id="0Xf-ad-bPn"/>
                             <constraint firstItem="2Wb-Hw-HiZ" firstAttribute="top" secondItem="9t8-a1-V0n" secondAttribute="top" id="6b3-qw-oqB"/>
                             <constraint firstItem="2Wb-Hw-HiZ" firstAttribute="leading" secondItem="9t8-a1-V0n" secondAttribute="leading" id="9n4-dr-lCC"/>
+                            <constraint firstItem="mua-Yk-khb" firstAttribute="leading" secondItem="eVP-5o-Ob7" secondAttribute="leading" id="Gkr-kv-tA5"/>
                             <constraint firstItem="eVP-5o-Ob7" firstAttribute="trailing" secondItem="hpm-XF-IEb" secondAttribute="trailing" id="Vab-kJ-XBX"/>
+                            <constraint firstItem="mua-Yk-khb" firstAttribute="top" secondItem="hpm-XF-IEb" secondAttribute="bottom" constant="20" id="Xg5-yF-08c"/>
                             <constraint firstAttribute="trailing" secondItem="2Wb-Hw-HiZ" secondAttribute="trailing" id="mSF-sA-jMC"/>
                             <constraint firstItem="hpm-XF-IEb" firstAttribute="leading" secondItem="eVP-5o-Ob7" secondAttribute="leading" id="peN-3o-a2T"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="actionCollectionView" destination="hpm-XF-IEb" id="KVb-ST-YiZ"/>
+                        <outlet property="sosButton" destination="mua-Yk-khb" id="BOG-Oz-GMG"/>
+                        <segue destination="Bw4-qi-KsO" kind="show" identifier="callSegue" id="4px-oZ-y3U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QK7-Iy-Hqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="9Lt-Ok-7Am" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="7449.275362318841" y="70.982142857142847"/>
+        </scene>
+        <!--callConfirm-->
+        <scene sceneID="KQZ-va-vWg">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="callConfirm" storyboardName="VideoCallStoryboard" referencedIdentifier="callConfirm" id="Bw4-qi-KsO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4JJ-qm-SIH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fl5-ny-hVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5087" y="1221"/>
         </scene>
         <!--Tab Bar Corner-->
         <scene sceneID="A1Z-4I-hQx">
@@ -782,7 +830,7 @@ your location to your contacts so that they can track you.</string>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Hut-Aj-FZR"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" destinationCreationSelector="commuteTabbarSegue" id="Hut-Aj-FZR"/>
                         <segue destination="xgM-zz-iO9" kind="relationship" relationship="viewControllers" id="c10-E2-3UM"/>
                         <segue destination="37Z-QU-VL9" kind="relationship" relationship="viewControllers" id="dhy-D3-cWv"/>
                     </connections>
@@ -792,8 +840,14 @@ your location to your contacts so that they can track you.</string>
             <point key="canvasLocation" x="5479.7101449275369" y="70.982142857142847"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="frs-Hq-JmM"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="person.badge.plus" catalog="system" width="128" height="124"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

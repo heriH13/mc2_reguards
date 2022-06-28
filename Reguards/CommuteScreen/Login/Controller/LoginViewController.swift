@@ -16,6 +16,7 @@ class LoginViewController: UIViewController{
     var alert = Alert()
     var userInformation = userData()
     var validate = Validate()
+    let dataBaseAction = CoredataController()
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Login"
@@ -61,7 +62,15 @@ class LoginViewController: UIViewController{
             let vc = segue.destination as? CommuteController
             let senderData = sender as? User
             senderData?.login = true
+            do{
+                try context.save()
+            }catch{
+                fatalError()
+            }
             vc?.user = senderData
+            
+            
+            
         }
     }
 }

@@ -47,5 +47,3 @@ class MapViewController: UIViewController{
       NotificationCenter.default
        .removeObserver(self, name: NSNotification.Name("com.user.receive.Coordinate"), object: nil) }
 }
-
-

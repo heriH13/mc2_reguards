@@ -22,49 +22,52 @@ extension MapViewController{
 
         let url = URL(string: urlString)
 
-        URLSession.shared.dataTask(with: url!, completionHandler: {
-            (data, response, error) in
-            if(error != nil){
-                print("error")
-            }else{
-                
-                do{
+        DispatchQueue.main.async {
+            URLSession.shared.dataTask(with: url!, completionHandler: {
+                (data, response, error) in
+                if(error != nil){
+                    print("error")
+                }else{
                     
-                    let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: AnyObject]
-                    
-                    let routes = json["routes"] as! NSArray
-                    for route in routes {
-                        let routeOverviewPolyline: NSDictionary = (route as! NSDictionary).value(forKey: "overview_polyline") as! NSDictionary
-
-                        let points = routeOverviewPolyline.object(forKey: "points")
-                        let path = GMSPath.init(fromEncodedPath: points! as! String)
-                        let polyline = GMSPolyline.init(path: path)
-                        polyline.strokeWidth = 3
-                        polyline.strokeColor = .green
-                        let bounds = GMSCoordinateBounds(path: path!)
-                        DispatchQueue.main.async {
-                            self.map.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
-                        }
+                    do{
                         
-                        polyline.map = self.map
-                    }
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: AnyObject]
+                        
+                        let routes = json["routes"] as! NSArray
+                        for route in routes {
+                            let routeOverviewPolyline: NSDictionary = (route as! NSDictionary).value(forKey: "overview_polyline") as! NSDictionary
 
-                    self.totalDistance { status, error in
-                        if let flag = status {
-                            if flag {
-                                completionHandler(true, nil)
+                            let points = routeOverviewPolyline.object(forKey: "points")
+                            let path = GMSPath.init(fromEncodedPath: points! as! String)
+                            let polyline = GMSPolyline.init(path: path)
+                            polyline.strokeWidth = 3
+                            polyline.strokeColor = .green
+                            let bounds = GMSCoordinateBounds(path: path!)
+                            DispatchQueue.main.async {
+                                self.map.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
+                            }
+                            
+                            polyline.map = self.map
+                        }
+
+                        self.totalDistance { status, error in
+                            if let flag = status {
+                                if flag {
+                                    completionHandler(true, nil)
+                                }
                             }
                         }
-                    }
-                    
-                }catch let error as NSError{
-                    print("error: \(error)")
-                    
-                    completionHandler(false, error)
+                        
+                    }catch let error as NSError{
+                        print("error: \(error)")
+                        
+                        completionHandler(false, error)
 
+                    }
                 }
-            }
-        }).resume()
+            }).resume()
+        }
+        
     }
     // mendapatkan waktu
     func totalDistance(completionHandler: @escaping (Bool?, Error?) -> Void){

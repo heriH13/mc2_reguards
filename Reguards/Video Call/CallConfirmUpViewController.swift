@@ -13,18 +13,21 @@ import Photos
 class CallConfirmUpViewController: UIViewController {
 
 
+    
     @IBOutlet weak var requestBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         authenticate()
+        requestBtn.addTarget(self, action: #selector(didTapRequest), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
         startPulseAnimation()
     }
     
-    @IBAction func onTapBtn(_ sender: UIButton) {
+    @objc func didTapRequest(){
+        print("******** MASUK ")
         let calleeId = "TestUser1"
         
         let dialParams = DialParams(calleeId: calleeId,
@@ -39,6 +42,22 @@ class CallConfirmUpViewController: UIViewController {
 //            }
         }
     }
+    
+//    @IBAction func onTapBtn(_ sender: UIButton) {
+//        let calleeId = "TestUser1"
+//
+//        let dialParams = DialParams(calleeId: calleeId,
+//                                    isVideoCall: true,
+//                                    callOptions: CallOptions(isAudioEnabled: true, isVideoEnabled: true),
+//                                    customItems: [:])
+//        SendBirdCall.dial(with: dialParams) { (call, error) in
+//            guard let call = call, error == nil else { return }
+//
+////            DispatchQueue.main.async {
+//        self.performSegue(withIdentifier: "dial", sender: call)
+////            }
+//        }
+//    }
     
 //    @IBAction func unwindToCallConfirm(_ unwindSegue: UIStoryboardSegue) {
 //

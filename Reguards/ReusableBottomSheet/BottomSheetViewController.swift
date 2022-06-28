@@ -117,8 +117,10 @@ class BottomSheetViewController: UIViewController {
         
         let image: UIImage? = UIImage(named: imageName ?? "Default")
         if imageName == "Hidden" {
+            profileImageView.isHidden = true
         } else {
             profileImageView.image = image
+            profileImageView.isHidden = false
         }
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         profileImageView.clipsToBounds = true

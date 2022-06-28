@@ -26,8 +26,10 @@ extension StartCommutingController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if(indexPath.row == 0){
             //untuk ke emergency call
+            performSegue(withIdentifier: "callSegue", sender: self)
         }else if(indexPath.row == 1){
             //untuk melakukan request guardian
+            print("***** REQUEST ")
         }
     }
 }

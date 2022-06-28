@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 class TabBarCorner: UITabBarController {
+    
+//    var user: User!
     override func viewDidLoad() {
         self.navigationItem.setHidesBackButton(true, animated: true)
         let layer = CAShapeLayer()
@@ -32,7 +34,25 @@ class TabBarCorner: UITabBarController {
 
         self.tabBar.itemWidth = 100.0
         self.tabBar.itemPositioning = .centered
+        
     }
+    
+    
+//    func sendUser(){
+//        let data = ["data" : [user]]
+//
+//        NotificationCenter.default
+//                    .post(name: NSNotification.Name("com.user.receive.User.Tab"),
+//                     object: nil,
+//                     userInfo: data)
+//
+//
+//    }
+    
+    
+//    deinit {
+//      NotificationCenter.default
+//       .removeObserver(self, name: NSNotification.Name("com.user.receive.User.Tab"), object: nil) }
 
 }
 
