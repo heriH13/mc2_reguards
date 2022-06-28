@@ -71,7 +71,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zCf-XU-8ox" secondAttribute="bottom" constant="80" id="xmx-pu-XfC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="commute" image="figure.walk" selectedImage="figure.walk" catalog="system" id="a5f-kN-Ahm">
+                    <tabBarItem key="tabBarItem" title="commute" image="figure.walk" catalog="system" selectedImage="figure.walk" id="a5f-kN-Ahm">
                         <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="14b-kV-BWq"/>
@@ -770,10 +770,16 @@ your location to your contacts so that they can track you.</string>
                 <tabBarController storyboardIdentifier="CommuteScreenTabBar" automaticallyAdjustsScrollViewInsets="NO" id="iD7-yo-KVi" customClass="TabBarCorner" customModule="Reguards" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zUp-0i-sxb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.2196078431372549" green="0.22352941176470587" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Hut-Aj-FZR"/>
@@ -788,7 +794,6 @@ your location to your contacts so that they can track you.</string>
     </scenes>
     <resources>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
-        <image name="figure.walk" width="128" height="128"/>
         <image name="person.badge.plus" catalog="system" width="128" height="124"/>
     </resources>
 </document>

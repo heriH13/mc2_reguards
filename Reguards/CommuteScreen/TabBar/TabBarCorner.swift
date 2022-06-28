@@ -22,8 +22,8 @@ class TabBarCorner: UITabBarController {
         layer.opacity = 1.0
         layer.isHidden = false
         layer.masksToBounds = false
-        layer.fillColor = UIColor(hex: "#38395E")?.cgColor
-  
+        layer.fillColor = #colorLiteral(red: 0.56, green: 0.57, blue: 0.94, alpha: 1)
+        
         self.tabBar.layer.insertSublayer(layer, at: 0)
         
         if let items = self.tabBar.items {
@@ -35,3 +35,4 @@ class TabBarCorner: UITabBarController {
     }
 
 }
+
