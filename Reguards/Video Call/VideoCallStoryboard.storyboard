@@ -248,6 +248,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapCancelBtn:" destination="NzX-6y-9fD" eventType="touchUpInside" id="grq-U7-7EX"/>
+                                    <segue destination="1F2-gN-Fth" kind="unwind" unwindAction="unwindCommuteScreenFromEndCall:" id="Fgx-Sq-Gi4"/>
                                 </connections>
                             </button>
                         </subviews>
