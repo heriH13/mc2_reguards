@@ -20,4 +20,12 @@ extension StartCommutingActiveController: UICollectionViewDelegate, UICollection
         cell.dataDisplayed = actionList[indexPath.row]
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if(indexPath.row == 0){
+            // call
+            performSegue(withIdentifier: "callSegue", sender: self)
+        }else{
+            // reguest
+        }
+    }
 }

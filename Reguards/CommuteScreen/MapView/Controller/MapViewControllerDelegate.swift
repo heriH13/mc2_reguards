@@ -61,13 +61,14 @@ extension MapViewController: CLLocationManagerDelegate{
         guard let location = locations.first else{
             return
         }
-        
+
         currentLocation = location.coordinate
         render()
-        
+
         }
         func render(){
             let coordinate = CLLocationCoordinate2D(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
             pinLocation(coordinate: coordinate)
+            manager.stopUpdatingLocation()
         }
 }

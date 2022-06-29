@@ -25,7 +25,7 @@ class CommuteController: UIViewController{
     var viewList: [UIView] = []
     var onCommute: Bool = false
     //location
-    let manager =  CLLocationManager()
+
     var locationCoordinate =  CLLocationCoordinate2D()
     var destination : CLLocationCoordinate2D?
     let titleList : [String] = ["Journey", "Contacts"]
@@ -48,8 +48,8 @@ class CommuteController: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.delegate =  self
+//        manager.desiredAccuracy = kCLLocationAccuracyBest
+//        manager.delegate =  self
         
     }
     //start Commuting
@@ -65,7 +65,6 @@ class CommuteController: UIViewController{
        .removeObserver(self, name: NSNotification.Name("com.user.receive.User"), object: nil)
         NotificationCenter.default
          .removeObserver(self, name: NSNotification.Name("com.user.receive.User1"), object: nil)
-        
         
     }
     

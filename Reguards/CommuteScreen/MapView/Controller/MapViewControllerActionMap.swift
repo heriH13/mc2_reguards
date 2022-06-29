@@ -44,7 +44,7 @@ extension MapViewController{
                             polyline.strokeColor = .green
                             let bounds = GMSCoordinateBounds(path: path!)
                             DispatchQueue.main.async {
-                                self.map.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
+                            self.map.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
                             }
                             
                             polyline.map = self.map
@@ -78,35 +78,38 @@ extension MapViewController{
         
         let url = URL(string: urlString)
 
-        URLSession.shared.dataTask(with: url!, completionHandler: { [self]
-            (data, response, error) in
-            if(error != nil){
-                print("error")
-            }else{
-                do{
-                    
-                    let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: AnyObject]
-                    let rows = json["rows"] as! NSArray
-                    print(rows)
+        DispatchQueue.main.async {
+            URLSession.shared.dataTask(with: url!, completionHandler: { [self]
+                (data, response, error) in
+                if(error != nil){
+                    print("error")
+                }else{
+                    do{
+                        
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: AnyObject]
+                        let rows = json["rows"] as! NSArray
+                        print(rows)
 
-                    let dic = rows[0] as! Dictionary<String, Any>
-                    let elements = dic["elements"] as! NSArray
-                    let dis = elements[0] as! Dictionary<String, Any>
-                    let distanceMiles = dis["distance"] as! Dictionary<String, Any>
-                    let miles = distanceMiles["text"] as! String
+                        let dic = rows[0] as! Dictionary<String, Any>
+                        let elements = dic["elements"] as! NSArray
+                        let dis = elements[0] as! Dictionary<String, Any>
+                        let distanceMiles = dis["distance"] as! Dictionary<String, Any>
+                        let miles = distanceMiles["text"] as! String
 
-                    let time = miles.replacingOccurrences(of: "mi", with: "")
-                    
-                    self.range = time
-                    completionHandler(true, nil)
+                        let time = miles.replacingOccurrences(of: "mi", with: "")
+                        
+                        self.range = time
+                        completionHandler(true, nil)
 
-                }catch let error as NSError{
-                    print("error:\(error)")
-                    completionHandler(false, error)
+                    }catch let error as NSError{
+                        print("error:\(error)")
+                        completionHandler(false, error)
+                    }
                 }
-            }
 
-        }).resume()
+            }).resume()
+        }
+        
     }
     func pinLocation(coordinate: CLLocationCoordinate2D){
         
